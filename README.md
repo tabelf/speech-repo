@@ -16,11 +16,11 @@ Speech Repo is a Chrome extension focused on improving response efficiency and s
 </p>
 
 ## 🔧 Manual Installation
-1. Download Speech Repo and extract the archive
+1. Download [Speech Repo](https://github.com/tabelf/speech-repo/releases/download/v0.1.0/extension.zip) and unzip the file
 2. Open Chrome and go to: chrome://extensions/
-3. Enable Developer mode
-4. Click Load unpacked and select the folder you just extracted, then click OK
-5. ⚠️ Important: Do not disable Developer mode, otherwise the extension will not work
+3. Enable Developer Mode
+4. Click Load unpacked extension and select the folder you just extracted, then click OK
+5. ⚠️ Important: Do not disable Developer Mode, otherwise the extension will not work
 6. install demo:
 <p align="center">
   <img
@@ -55,7 +55,7 @@ Speech Repo was developed to address these issues: it centralizes frequently use
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/tabelf/speech-repo.git
    cd speech-repo
    ```
 
