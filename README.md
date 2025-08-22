@@ -4,7 +4,7 @@
 
 [ English | [Chinese / 中文](README_zh.md) ]
 
-Speech Repo is a Chrome extension focused on improving response efficiency and standardizing message templates. It is widely applicable to daily online communication scenarios for operations, customer support, and merchants.
+Speech Repo is a browser extension designed to boost communication efficiency and streamline script management. It works seamlessly on both Chrome and Edge, making it a practical tool for operators, customer service teams, and merchants in their daily communication workflows.
 
 ## Demo
 <p align="center">
@@ -16,20 +16,23 @@ Speech Repo is a Chrome extension focused on improving response efficiency and s
 </p>
 
 ## 🔧 Manual Installation
+#### Chrome Extension
 1. Download [Speech Repo](https://github.com/tabelf/speech-repo/releases/download/v0.1.0/extension.zip) and unzip the file
 2. Open Chrome and go to: chrome://extensions/
 3. Enable Developer Mode
 4. Click Load unpacked extension and select the folder you just extracted, then click OK
 5. ⚠️ Important: Do not disable Developer Mode, otherwise the extension will not work
 6. install demo:
-<p align="center">
-  <img
-    alt="logo"
-    src="./docs/demo2.gif"
-    width="600"
-  />
-</p>
+<p align="center"><img alt="logo" src="./docs/demo2.gif" width="600"/></p>
 
+#### Edge Extension
+1. Download [Speech Repo](https://github.com/tabelf/speech-repo/releases/download/v0.1.0/extension.zip) and unzip the file
+2. Open Edge and go to: edge://extensions/
+3. Enable Developer Mode.
+4. Click Load unpacked extension..., select the unzipped folder, and confirm.
+5. ⚠️ Important: Do not turn off Developer Mode, otherwise the extension will not run.
+6. Installation demo:
+<p align="center"><img alt="Edge installation demo" src="./docs/edge_demo.gif" width="600" /></p>
 
 ## 🎯 Project Background
 In PC web-based instant messaging scenarios, standardized message templates can greatly improve reply efficiency and maintain content consistency. However, templates are often scattered across documents, spreadsheets, or chat records, and sometimes rely on personal memory. As business needs evolve, the variety of templates increases, making them hard to find, difficult to manage, and prone to version inconsistencies.

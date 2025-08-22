@@ -4,7 +4,7 @@
 
 [ [English/英文](README.md)  | Chinese ]
 
-Speech Repo 话术库是一款专注于提升沟通效率和实现话术统一管理的 Chrome 插件，广泛适用于运营、客服及商户等日常沟通场景。
+Speech Repo 话术库是一款专注于提升沟通效率和实现话术统一管理的浏览器插件，支持 Chrome 和 Edge 两款主流浏览器，广泛适用于运营、客服及商户等日常沟通场景。
 
 
 ## 演示
@@ -17,19 +17,23 @@ Speech Repo 话术库是一款专注于提升沟通效率和实现话术统一�
 </p>
 
 ## 🔧 手动安装
+#### Chrome 插件
 1. 下载 [Speech Repo](https://github.com/tabelf/speech-repo/releases/download/v0.1.0/extension.zip) 然后解压文件
 1. 打开 Chrome，输入: `chrome://extensions/`
 1. 勾选 开发者模式 (Developer Mode)
 1. 选择 加载未打包的扩展程序 (Load unpacked extension...) 然后选中刚才解压的文件夹目录，点击确定
 1. 注意⚠️：不要勾掉 开发者模式 (Developer Mode)，否则无法运行
 1. 安装演示:
-<p align="center">
-  <img
-    alt="logo"
-    src="./docs/demo2.gif"
-    width="600"
-  />
-</p>
+<p align="center"><img alt="logo" src="./docs/demo2.gif" width="600"/></p>
+
+#### Edge 插件
+1. 下载 [Speech Repo](https://github.com/tabelf/speech-repo/releases/download/v0.1.0/extension.zip) 然后解压文件
+1. 打开 Edge，输入: `edge://extensions/`
+1. 勾选 开发者模式 (Developer Mode)
+1. 选择 加载解压缩的扩展 (Load unpacked extension...) 然后选中刚才解压的文件夹目录，点击确定
+1. 注意⚠️：不要勾掉 开发者模式 (Developer Mode)，否则无法运行
+1. 安装演示:
+<p align="center"><img alt="Edge installation demo" src="./docs/edge_demo.gif" width="600" /></p>
 
 
 ## 🎯 项目背景
