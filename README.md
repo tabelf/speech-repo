@@ -26,7 +26,7 @@ Speech Repo is a browser extension designed to boost communication efficiency an
 <p align="center"><img alt="logo" src="./docs/demo2.gif" width="600"/></p>
 
 #### Edge Extension
-1. Download [Speech Repo](https://github.com/tabelf/speech-repo/releases/download/v0.1.0/extension.zip) and unzip the file
+1. Download [Speech Repo](https://github.com/tabelf/speech-repo/releases/download/v0.1.1/extension.zip) and unzip the file
 2. Open Edge and go to: edge://extensions/
 3. Enable Developer Mode.
 4. Click Load unpacked extension..., select the unzipped folder, and confirm.
