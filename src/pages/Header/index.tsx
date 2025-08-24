@@ -17,6 +17,14 @@ function Header() {
     const { addCategory } = useCategoryStore();
     const { addTag } = useTagStore();
     
+    // 标签验证函数 - 检查是否包含中文或英文逗号
+    const validateTag = (value: string): string | null => {
+        if (value.includes(',') || value.includes('，')) {
+            return '标签不能包含逗号';
+        }
+        return null;
+    };
+
     return (
         <div className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white p-5 shadow-lg">
             <div className="flex justify-between items-center">
@@ -38,12 +46,14 @@ function Header() {
                         </DropdownMenuContent>
                     </DropdownMenu>
 
+                    {/* 标签对话框添加验证 */}
                     <SingleInputDialog
                         open={openTagsDialog}
                         onOpenChange={setOpenTagsDialog}
                         title={t('dialog.tag.title')}
                         placeholder={t('dialog.tag.placeholder')}
                         onSubmit={(value) => addTag(value)}
+                        validate={validateTag}
                     />
 
                     <SingleInputDialog
@@ -53,6 +63,8 @@ function Header() {
                         placeholder={t('dialog.category.placeholder')}
                         onSubmit={(value) => addCategory(value)}
                     />
+
+                    
                 </div>
             </div>
         </div>

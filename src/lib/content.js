@@ -66,14 +66,14 @@ if (chrome?.runtime) {
     const root = shadowRoot?.getElementById('speech-extension-root');
     if (open) {
       console.log('speechToggleSidebar open!')
-      document.body.style.marginRight = '360px'; // 或 paddingRight，根据你布局需要
+      document.body.style.marginRight = '410px'; // 或 paddingRight，根据你布局需要
       document.body.style.transition = 'margin 0.3s ease';
 
       if (root) {
         root.style.position = 'fixed';
         root.style.top = '0';
         root.style.right = '0';
-        root.style.width = '360px';
+        root.style.width = '410px';
         root.style.height = '100vh';
         root.style.zIndex = '9999';
         root.style.backgroundColor = 'white'; // 可选：默认背景

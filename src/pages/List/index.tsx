@@ -20,13 +20,12 @@ import { useToastFeedback } from '@/hooks/useToastFeedback';
 function List() {
     const { t } = useTranslation();
     const withToastFeedback = useToastFeedback();
-    const [currentFilter, setCurrentFilter] = useState(DEFAULT_ALL);
     const [currentPageNum, setCurrentPageNum] = useState(1);
     const [copiedId, setCopiedId] = useState<number | null>(null);
 
     const navigate = useNavigate();
 
-    const { scripts, total, loadScripts, deleteScript, deleteCategory } = useScriptStore();
+    const { scripts, total, loadScripts, deleteScript, deleteCategory, currentFilter, setCurrentFilter } = useScriptStore();
     const { categories, loadCategories } = useCategoryStore();
 
     useEffect(() => {
@@ -61,15 +60,18 @@ function List() {
         navigate(`/create?id=${id}`);
     };
 
+    // 更新所有设置filter的地方
+    const handleFilterChange = (filter: string) => {
+        setCurrentFilter(filter);
+        setCurrentPageNum(1);
+    };
+
     return (
         <>
             {/* Category Filters */}
             <div className="p-5 flex flex-wrap gap-2">
                 <button
-                    onClick={() => {
-                        setCurrentFilter(DEFAULT_ALL);
-                        setCurrentPageNum(1);
-                    }}
+                    onClick={() => handleFilterChange(DEFAULT_ALL)}
                     className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${currentFilter === DEFAULT_ALL
                         ? 'bg-gradient-to-r from-indigo-600 to-purple-700 text-white shadow-lg -translate-y-0.5'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -79,10 +81,7 @@ function List() {
                 </button>
                 {categories.map(c => (
                     <button
-                        onClick={() => {
-                            setCurrentFilter(c.name);
-                            setCurrentPageNum(1);
-                        }}
+                        onClick={() => handleFilterChange(c.name)}
                         className={`flex items-center gap-0.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all ${currentFilter === c.name
                             ? 'bg-gradient-to-r from-indigo-600 to-purple-700 text-white shadow-lg -translate-y-0.5'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
